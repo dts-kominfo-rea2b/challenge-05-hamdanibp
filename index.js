@@ -7,28 +7,20 @@ const names = ["Halo", "Angel", "Nyoman", "Ketut", "Aisyah"];
 // "2. Nama"
 // ...
 const sorter = (names, callback) => {
-  const sortingItems = names.sort().map((name, i) => `${i + 1}. ${name}`);
-    
-  return callback(sortingItems);
+  return callback(names);
 };
 
 // TODO: Fungsi untuk mengurutkan array of string secara ascending
 // mengembalikan array yang sudah diurutkan
 const sortAscending = items => {
-  const splitItems = items.map(item => item.split(". "))
-    .map(data => data[1]);
-
-  return splitItems.sort()
+  return items.sort()
     .map((item, i) => `${i + 1}. ${item}`);
 }
 
 // TODO: Fungsi untuk mengurutkan array of string secara descending
 // mengembalikan array yang sudah diurutkan
 const sortDescending = items => {
-  const splitItems = items.map(item => item.split(". "))
-    .map(data => data[1]);
-
-  return splitItems.sort().reverse()
+  return items.sort().reverse()
     .map((item, i) => `${i + 1}. ${item}`);
 };;
 

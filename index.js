@@ -19,8 +19,7 @@ const sortAscending = items => {
   const splitItems = items.map(item => item.split(". "))
     .map(data => data[1]);
 
-  return splitItems.sort()
-    .map((name, i) => `${i + 1}. ${name}`);
+  return splitItems.sort();
 };
 
 // TODO: Fungsi untuk mengurutkan array of string secara descending
@@ -29,8 +28,7 @@ const sortDescending = items => {
   const splitItems = items.map(item => item.split(". "))
     .map(data => data[1]);
 
-  return splitItems.sort().reverse()
-    .map((name, i) => `${i + 1}. ${name}`);
+  return splitItems.sort().reverse();
 };;
 
 // ! JANGAN DIMODIFIKASI

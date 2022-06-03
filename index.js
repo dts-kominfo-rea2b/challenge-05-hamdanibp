@@ -7,8 +7,7 @@ const names = ["Halo", "Angel", "Nyoman", "Ketut", "Aisyah"];
 // "2. Nama"
 // ...
 const sorter = (names, callback) => {
-  const sortingItems = names.sort()
-    .map((name, i) => `${i + 1}. ${name}`);
+  const sortingItems = names.sort().map((name, i) => `${i + 1}. ${name}`);
     
   return callback(sortingItems);
 };
@@ -19,8 +18,9 @@ const sortAscending = items => {
   const splitItems = items.map(item => item.split(". "))
     .map(data => data[1]);
 
-  return splitItems.sort();
-};
+  return splitItems.sort()
+    .map((item, i) => `${i + 1}. ${item}`);
+}
 
 // TODO: Fungsi untuk mengurutkan array of string secara descending
 // mengembalikan array yang sudah diurutkan
@@ -28,7 +28,8 @@ const sortDescending = items => {
   const splitItems = items.map(item => item.split(". "))
     .map(data => data[1]);
 
-  return splitItems.sort().reverse();
+  return splitItems.sort().reverse()
+    .map((item, i) => `${i + 1}. ${item}`);
 };;
 
 // ! JANGAN DIMODIFIKASI
